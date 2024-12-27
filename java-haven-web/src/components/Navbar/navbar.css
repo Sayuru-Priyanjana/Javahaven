@@ -1,0 +1,45 @@
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between; /* Align items to opposite ends */
+    align-items: center; /* Center vertically */
+    max-width: 1200px; /* Limit width for responsiveness */
+    margin: 0 auto; /* Center horizontally */
+   
+    
+  }
+  
+  .logo {
+    font-size: 2rem; /* Adjust font size as needed */
+    font-weight: bold;
+    color: #fff;
+    
+  }
+  
+  .nav a {
+    color: #ffffff; /* White link color */
+    text-decoration: none;
+    margin: 0 20px; /* Spacing between links */
+  }
+  
+  .right-links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .right-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px; /* Spacing between links */
+    padding: 10px 20px; /* Padding for buttons */
+    border-radius: 25px; /* Rounded corners */
+    
+  }
+  
+  .signin {
+    background-color: transparent; /* Transparent background for Sign In */
+  }
+  
+  .signup {
+    background-color: #ff9900; /* Yellow background for Sign Up */
+  }
