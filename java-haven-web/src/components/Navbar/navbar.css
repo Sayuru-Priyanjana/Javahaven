@@ -10,8 +10,10 @@
   }
   
   .logo {
-    font-size: 2rem; /* Adjust font size as needed */
-    font-weight: bold;
+    font-family: "Clicker Script", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 35px;
     color: #fff;
     
   }
@@ -20,6 +22,16 @@
     color: #ffffff; /* White link color */
     text-decoration: none;
     margin: 0 20px; /* Spacing between links */
+    font-family: "Roboto", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 14px;
+    
+  }
+
+  .nav a:hover {
+    color: #9c9180; /* Yellow on hover */
+    
   }
   
   .right-links {
@@ -33,13 +45,24 @@
     margin-left: 20px; /* Spacing between links */
     padding: 10px 20px; /* Padding for buttons */
     border-radius: 25px; /* Rounded corners */
+    font-family: "Roboto", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 14px;
     
   }
   
   .signin {
     background-color: transparent; /* Transparent background for Sign In */
   }
+
+  .signin:hover{
+    background-color: #9c918056; 
+  }
   
   .signup {
-    background-color: #ff9900; /* Yellow background for Sign Up */
+    background-color: #db9225f1; /* Yellow background for Sign Up */
+  }
+  .signup:hover {
+    background-color: transparent; 
   }

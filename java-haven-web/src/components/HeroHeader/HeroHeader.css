@@ -33,28 +33,42 @@
     flex: 1; /* Allow text to take up available space */
     margin-right: 20px; /* Add spacing between text and image */
 }
+/* @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap'); */
+
+
+    
 
 .hero-content h1 {
-    font-size: 4em;
-    margin-bottom: 20px;
-    font-family: 'Brush Script MT', cursive;
+    font-size: 220px;
+    margin-bottom: 5px;
+    font-family: "Clicker Script", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .hero-content p {
-    font-size: 1.2em;
-    line-height: 1.6;
+    font-size: 15px;
+    line-height: 25px;
     margin-bottom: 30px;
     text-align: justify; /* Justify the text */
+    font-family: "Roboto", serif;
+    font-weight: 300;
+    color: rgb(212, 212, 212);
+    max-width: 527px;
+    opacity: 0.9;
 }
 
 .order-now {
-    background-color: #f0c14b;
-    color: white;
-    padding: 15px 30px;
+    background-color: #ff9900;
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
     border: none;
-    border-radius: 5px;
-    font-size: 1.1em;
+    border-radius: 24px;
+    font-size: 16px;
+    font-style: normal;
     cursor: pointer;
+    width: 110;
+    height: 30;
     transition: background-color 0.3s ease;
 }
 
@@ -63,51 +77,18 @@
 }
 
 .rotatingCoffee {
-    width: 200px; /* Set a fixed width for the image */
+    width: 500px; /* Set a fixed width for the image */
     height: auto; /* Maintain aspect ratio */
-    animation: rotate 10s linear infinite; /* Apply rotation animation */
+    animation: rotate 30s linear infinite; /* Apply rotation animation */
     flex-shrink: 0; /* Prevent image from shrinking */
+    margin: 0; /* Remove margin */
+    transition: transform 0.5s ease; /* Smooth transition for hover effects */
 }
 
 .rotatingCoffee:hover {
     transform: scale(1.1) rotate(360deg); /* Combine zoom and maintain rotation */
 }
-.rotating-text-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.rotating-text {
-    position: absolute;
-    font-size: 24px;
-    color: white;
-    transform-origin: center;
-}
-
-.rotating-text:nth-child(1) {
-    transform: rotate(0deg) translateY(-200px) rotate(0deg);
-}
-
-.rotating-text:nth-child(2) {
-    transform: rotate(120deg) translateY(-200px) rotate(-120deg);
-}
-
-.rotating-text:nth-child(3) {
-    transform: rotate(240deg) translateY(-200px) rotate(-240deg);
-}
-
-.rotatingCoffee {
-    position: relative; /* Ensure the container is positioned relative */
-}
-
-.rotatingCoffee:hover .rotating-text {
-    transform: scale(1.1) rotate(360deg);
-}
 
 
 @keyframes rotate {
