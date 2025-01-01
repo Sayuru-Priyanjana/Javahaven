@@ -5,7 +5,8 @@ function NavBar(){
     return(
     <div className="navbar">
         <div className="navbar-content">
-            <h1 className="logo">Java Haven</h1>
+            
+            <a className="logo">Java Haven</a>
             <nav className="nav">
                 <a href="#">Home</a>
                 <a href="#">Menu</a>

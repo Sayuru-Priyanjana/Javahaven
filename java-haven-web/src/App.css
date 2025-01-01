@@ -8,14 +8,12 @@
   height: 100%;
 }
 
-.app-container { /* Style the container */
+/* .app-container { 
   display: flex;
-  flex-direction: column; /* Stack navbar and hero header vertically */
-  /* background-color: #270C03; */
-
+  flex-direction: column;
   background-image: url('./assets/8.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-}
+} */
 
 

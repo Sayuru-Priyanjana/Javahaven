@@ -11,8 +11,11 @@
   },
   "dependencies": {
     "@fontsource/clicker-script": "^5.1.1",
+    "@react-spring/parallax": "^9.7.5",
+    "@react-spring/web": "^9.7.5",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-spring": "^9.7.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",

@@ -10,12 +10,13 @@
 
 .hero-header::before {
     content: "";
+    /* background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)); */
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)); */
     z-index: 1;
 }
 
@@ -40,10 +41,26 @@
 
 .hero-content h1 {
     font-size: 220px;
-    margin-bottom: 5px;
+    margin-bottom: -10px;
+    margin-top: -40px;
     font-family: "Clicker Script", serif;
     font-weight: 400;
     font-style: normal;
+    
+}
+
+.top-p{
+
+    font-size: 15px;
+    line-height: 25px;
+    margin-top: -50px; /* Adjust the margin to position top-p closer to h1 */
+    text-align: justify; /* Justify the text */
+    font-family: "Roboto", serif;
+    font-weight: 300;
+    color: rgb(224, 224, 224);
+    max-width: 527px;
+    opacity: 0.9;
+    margin-left: 20px;
 }
 
 .hero-content p {
@@ -53,7 +70,7 @@
     text-align: justify; /* Justify the text */
     font-family: "Roboto", serif;
     font-weight: 300;
-    color: rgb(212, 212, 212);
+    color: rgb(255, 255, 255);
     max-width: 527px;
     opacity: 0.9;
 }
@@ -77,12 +94,14 @@
 }
 
 .rotatingCoffee {
-    width: 500px; /* Set a fixed width for the image */
+    width: 450px; /* Set a fixed width for the image */
     height: auto; /* Maintain aspect ratio */
     animation: rotate 30s linear infinite; /* Apply rotation animation */
     flex-shrink: 0; /* Prevent image from shrinking */
-    margin: 0; /* Remove margin */
+    margin-right: 35px;
     transition: transform 0.5s ease; /* Smooth transition for hover effects */
+    margin-top: -30px;
+    
 }
 
 .rotatingCoffee:hover {
