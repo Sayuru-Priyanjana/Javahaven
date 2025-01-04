@@ -1,0 +1,110 @@
+.coffee-card {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+
+
+
+/* .coffee-card:hover .coffee-card-description,
+.coffee-card:hover .coffee-card-rating {
+    color: black;
+} */
+   
+
+.coffee-card-image-container {
+    position: absolute;
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.coffee-card-image {
+    width: 240px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.coffee-card-content {
+    margin-top: 120px;
+    padding: 70px 16px 16px;
+    text-align: center;
+    background-color: #341212;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: #0000009d 1px solid;
+}
+
+.coffee-card:hover .coffee-card-content{
+    background-color: rgb(24, 21, 21);
+    transition: ease-in-out 0.1s;
+}
+
+.coffee-card:hover .coffee-card-image {
+    transform: rotate(40deg);
+    transition: transform 0.2s ease-in-out;
+}
+
+.coffee-card-name {
+    font-size: 20px;
+    margin: 16px 0;
+    color: #c8f092;
+    transition: color 0.1s ease-in-out;
+    text-align: left;
+    margin-bottom: 30px;
+    margin-top: 50px;
+
+}
+
+.coffee-card-description {
+    color: #ffffffce;
+    font-size: 15px;
+    text-align: justify;
+    margin-bottom: 30px;
+    font-weight: lighter;
+}
+
+.coffee-card-rating {
+    font-size: 15px;
+    margin-bottom: 16px;
+    color: #fff;
+    text-align: left;
+}
+
+.star {
+    color: gold;
+    font-size: 1.2em;
+}
+
+.coffee-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.coffee-card-price {
+    color: #c8f092;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.coffee-card-button {
+    background-color: #c8f092;
+    color: #3c2a2a;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.coffee-card-button:hover {
+    background-color: #a8d082;
+}

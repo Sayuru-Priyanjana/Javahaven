@@ -1,0 +1,9 @@
+
+
+.coffee-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    padding-inline: 100px; /* Optional padding */
+    
+    
+}
