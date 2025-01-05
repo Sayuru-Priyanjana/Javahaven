@@ -1,4 +1,12 @@
 
+.coffee-items{
+    margin-top: 10px;
+    background-color: #BAD99C;
+    padding-bottom: 40px;
+    padding-top: -20px;
+
+}
+
 
 .coffee-grid {
     display: grid;
