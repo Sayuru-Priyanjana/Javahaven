@@ -1,0 +1,117 @@
+.recomend{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 70px;
+    margin: 70px 70px;
+}
+
+.recomend-header{
+    font-family: "Dancing Script", serif;
+    color: #F8E4BE;
+    font-size: 70px;
+    align-self: center;
+    margin: 20px 70px;
+    z-index: 1;
+    text-shadow: #000000 2px 2px 2px;
+}
+
+.recomend-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+
+.recomend-card{
+    cursor: pointer;
+    border: solid 0.1px rgba(255, 255, 255, 0.541);
+    border-radius: 35px;
+}
+
+.recomend-card:hover .upper{
+    background-color: transparent;
+    transition: 0.1s;
+}
+
+.recomend-card:hover .recomend-image{
+    scale: 1.2;
+    transition: ease-in-out 0.2s;
+}
+
+.upper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #54372a;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+
+}
+
+.lower{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #6D5349;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    padding: 20px 40px;
+    
+    
+}
+
+.recomend-image{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.recomend-name1{
+    color: #F8E4BE;
+    font-size: 20px;
+    font-family: 'roboto';
+    font-weight: 400;
+    margin-inline: 10px;
+    text-shadow: 1px 1px 4px #000000;
+    
+}
+
+.recomend-name2{
+    color: #3b3a37a9;
+    font-size: 25px;
+    font-family: 'roboto';
+    font-weight: 400;
+    margin-inline: 10px;
+}
+
+.recomend-name3{
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'roboto';
+    font-weight: 200;
+    margin-inline: 10px;
+    text-shadow: 1px 1px 4px #000000;
+}
+
+.names{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info{
+    height: 30px;
+    width: auto;
+    margin: 20px auto -10px 20px;
+    opacity: 0.6;
+}
+
+.cart{
+    height: 30px;
+    width: auto;
+    margin: -10px 30px 10px auto;
+    opacity: 0.8;
+}

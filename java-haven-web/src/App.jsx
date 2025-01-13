@@ -7,11 +7,16 @@ import NavBar from './components/Navbar/navbar'
 import HeroHeader from './components/HeroHeader/HeroHeader'
 import CoffeeCard from './components/CoffeeCard/coffeecard'
 import CoffeeItems from './components/CoffeeItems/coffeeitems'
+import Intro from './components/Intro/intro'
 
 import layer1 from './assets/8.jpg'
 import layer2 from './assets/13.png'
 import Coffee2 from './assets/coffee2.png'
-import items from './assets/items.jpg'
+import Services from './components/Services/Services'
+import Offer from './components/Offer/Offer'
+import Reserve from './components/reserve/reserve'
+import Recomended from './components/Recomended/recomended'
+
 
 
 const coffee = {
@@ -25,13 +30,14 @@ const coffee = {
 function App() {
   return (
     <div className="app">
-      <Parallax pages={3}>
+      <Parallax pages={8}>
      
         <ParallaxLayer
           offset={0}
           speed={1}
           factor={1}
           style={{ backgroundImage: `url(${layer1})`, backgroundSize: 'cover', backgroundPosition: 'bottom' }}
+          // style={{ backgroundColor: 'transparent' }}
         />
 
         <ParallaxLayer
@@ -39,6 +45,7 @@ function App() {
           speed={1.5}
           factor={1.15}
           style={{ backgroundImage: `url(${layer2})`, backgroundSize: 'cover', backgroundPosition: 'bottom' }}
+          // style={{ backgroundColor: 'transparent' }}
         />
 
         <ParallaxLayer offset={0} speed={0.5} factor={1}>
@@ -47,9 +54,25 @@ function App() {
         </ParallaxLayer>
 
         {/* ================================ This is page 2========================================= */}
+      
+        
+        <ParallaxLayer offset={1.25} speed={1} factor={4}>
+          <Intro/>
+        </ParallaxLayer>
        
-        <ParallaxLayer offset={1} speed={0.5} factor={1}>
-          <h1 style={{ 
+
+        {/* ================================== This is Page 2==========================================*/}
+
+        <ParallaxLayer offset={2} speed={0.5} factor={1}>
+        <Services />
+        <Offer />
+        <Reserve />
+        <Recomended />
+         
+        </ParallaxLayer>
+
+        <ParallaxLayer offset={5.15} speed={0.2} factor={4}>
+        <h1 style={{ 
             textAlign: 'center', 
             fontSize: 50, 
             color:'#333', 
@@ -58,9 +81,7 @@ function App() {
             textDecoration: 'underline',
             
              }}>Our Products</h1>  
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={1.15} speed={0.2} factor={1}>
+          
           <CoffeeItems />
         </ParallaxLayer>
        

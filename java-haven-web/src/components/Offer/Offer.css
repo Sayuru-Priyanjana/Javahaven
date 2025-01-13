@@ -1,0 +1,77 @@
+.offer{
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 30px;
+    
+}
+
+.offer-header{
+    font-family: "Dancing Script", serif;
+    color: #F8E4BE;
+    font-size: 64px;
+    align-self: start;
+    margin: 20px 70px;
+    z-index: 1;
+    text-shadow: #000000 2px 2px 2px;
+}
+
+.offer-container{
+    background-color: #54372B;
+    border-radius: 35px;
+    margin-top: -43px;
+    height: 378px;
+    z-index: 0;
+    display: flex;
+    flex-direction: row;
+    box-shadow: -5px 0px 10px 1px #0000008e;
+    display: flex;
+    flex-direction: row;
+}
+
+.offer-amount{
+    color: #F8E4BE;
+    font-family: "Sansita Swashed", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 45px;
+    text-shadow: #000000 2px 5px 4px;
+}
+
+.offer-text{
+    color: #F8E4BE;
+    font-family: "roboto", serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 20px;
+    margin: 20px;
+    max-width: 700px;
+
+}
+
+.offer-button{
+    background-color: #d8b36f;
+    border-radius: 35px;
+    padding: 10px 20px;
+    margin: 20px;
+    font-family: "Sansita Swashed", serif;
+    font-size: 20px;
+    font-weight: 200;
+    cursor: pointer;
+    border: solid 0.1px #d8b36f;
+}
+
+.offer-button:hover{
+    background-color:transparent;
+    color: #ffffff;
+    transition: 0.1s;
+}
+
+.offer-vertical{
+    display: flex;
+    flex-direction: column;
+}
+
+.offer-image{
+    margin-left: 140px;
+}

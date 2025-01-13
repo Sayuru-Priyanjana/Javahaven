@@ -42,7 +42,7 @@
 }
 
 .coffee-card:hover .coffee-card-content{
-    background-color: rgb(24, 21, 21);
+    background-color: rgb(0, 0, 0);
     transition: ease-in-out 0.1s;
 }
 

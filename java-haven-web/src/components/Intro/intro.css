@@ -1,0 +1,49 @@
+.big-frame{
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 30px;
+    
+}
+
+.sub-frame{
+    background-color: #54372B;
+    border-radius: 35px;
+    margin-top: -43px;
+    height: 378px;
+    z-index: 0;
+    display: flex;
+    flex-direction: row;
+    box-shadow: -5px 0px 10px 1px #000000;
+}
+
+.image-ourstory{
+   height: 454px;
+   margin-top: -60px;
+}
+
+.text{
+    font-family: "Sansita Swashed", serif;
+    color: #cfcecc;
+    font-size: 16px;
+    line-height: 25px;
+    
+    z-index: 1;
+    font-weight: 200;
+    font-style: light;
+    text-align: justify;
+    margin: 80px 70px;
+    
+}
+
+.header{
+    font-family: "Dancing Script", serif;
+    color: #F8E4BE;
+    font-size: 50px;
+    align-self: end;
+    margin: 20px 70px;
+    z-index: 1;
+    text-shadow: #000000 2px 2px 2px;
+}
+
+
