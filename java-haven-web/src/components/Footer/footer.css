@@ -1,0 +1,101 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    margin:10px 0px;
+    padding: 50px 0 0 0;
+    
+
+}
+
+.social-media{
+    color: aliceblue;
+    font-family: roboto;
+    font-weight: 400;
+    text-align: center;
+
+}
+
+.social-media-container{
+    height: 200px;
+}
+
+.footer-blender{
+
+    margin-top: -50px;
+    margin-right: 20px;
+}
+
+.colored-footer{
+    display: flex;
+    flex-direction: row;
+    background-color: #533529;
+    
+}
+
+.sub-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.column-data {
+    display: flex;
+    flex-direction: column;
+    height: 45%;
+    justify-content: space-between;
+    
+}
+
+.footer-title{
+    font-family: "Sansita Swashed", serif;
+    color: aliceblue;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 20px;
+    border-bottom: solid 0.1px rgba(107, 104, 97, 0.788);
+
+
+}
+
+.footer-item{
+    font-family: 'roboto';
+    color: rgba(240, 248, 255, 0.808);
+    font-style: normal;
+    font-weight: 200;
+    font-size: 16px;
+
+
+}
+
+.copyright{
+    margin: -60px auto auto 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #221518;
+    width: 100%;
+
+
+}
+
+.copyright h2{
+    color: #FFF3E0;
+    font-family: 'roboto';
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 200;
+
+}
+
+.copyright h3{
+    color: #FFF3E0;
+    font-family: 'roboto';
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 200;
+
+}

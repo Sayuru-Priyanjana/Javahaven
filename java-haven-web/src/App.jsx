@@ -16,6 +16,9 @@ import Services from './components/Services/Services'
 import Offer from './components/Offer/Offer'
 import Reserve from './components/reserve/reserve'
 import Recomended from './components/Recomended/recomended'
+import Menu from './components/Menu/menu'
+import Review from './components/Review/review'
+import Footer from './components/Footer/footer'
 
 
 
@@ -50,28 +53,36 @@ function App() {
 
         <ParallaxLayer offset={0} speed={0.5} factor={1}>
           <NavBar />
-          <HeroHeader />          
+          <HeroHeader />
+         
+                
         </ParallaxLayer>
 
         {/* ================================ This is page 2========================================= */}
       
         
-        <ParallaxLayer offset={1.25} speed={1} factor={4}>
-          <Intro/>
+        <ParallaxLayer offset={1} speed={1} factor={1}>
+        <Intro/>
+        <Services />
+        <Offer />
+        <Reserve />
+        <Recomended /> 
+        <Menu/>
+        <Review/>
+        <Footer/>
+
+
         </ParallaxLayer>
        
 
         {/* ================================== This is Page 2==========================================*/}
 
-        <ParallaxLayer offset={2} speed={0.5} factor={1}>
-        <Services />
-        <Offer />
-        <Reserve />
-        <Recomended />
+        <ParallaxLayer offset={4} speed={0.5} factor={1}>
+          
          
         </ParallaxLayer>
 
-        <ParallaxLayer offset={5.15} speed={0.2} factor={4}>
+        <ParallaxLayer offset={7.15} speed={0.2} factor={4}>
         <h1 style={{ 
             textAlign: 'center', 
             fontSize: 50, 

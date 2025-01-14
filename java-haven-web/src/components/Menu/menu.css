@@ -1,0 +1,85 @@
+.menu{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
+    margin: 120px 10px;
+}
+
+.menu-header{
+    font-family: "Dancing Script", serif;
+    color: #F8E4BE;
+    font-size: 70px;
+    align-self: center;
+    margin: 20px 10px;
+    z-index: 1;
+    text-shadow: #000000 2px 2px 2px;
+}
+
+.menu-container{
+    
+    display: flex;
+    flex-direction: row;
+    background: radial-gradient(circle, #77514294, #22151800);
+    
+}
+
+.menu-image{
+    max-width: 400px;
+}
+
+.menu-image:hover{
+    scale: 1.05;
+    transition: ease-in-out 0.2s;
+}
+
+.menuleft{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin: 0px auto;
+    
+}
+
+.menuright{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin: 0px auto;
+}
+
+.item{
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    margin: 30px auto;
+    border-bottom: solid 3px rgba(180, 133, 45, 0.719);
+    padding: auto 10px;
+    cursor: pointer;
+}
+
+.item:hover{
+    scale: 1.05;
+    transition: ease-in-out 0.1s;
+}
+
+
+
+.item-price{
+    font-family: "Dancing Script", serif;
+    color: #ffffff9f;
+    font-size: 24px;
+    text-shadow: 2px 2px 4px black;
+    font-weight: 300;
+    align-content: center;
+    margin: auto 40px;
+}
+
+.item-name{
+    font-family: "Dancing Script", serif;
+    color: #f8e4be;
+    font-size: 48px;
+    text-shadow: 2px 2px 4px black;
+    font-weight: 500;
+    margin:auto 40px
+}
+
