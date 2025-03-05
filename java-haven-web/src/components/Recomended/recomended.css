@@ -1,122 +1,172 @@
-.recomend{
+.recomend {
     display: flex;
     flex-direction: column;
-    padding: 20px 30px;
-    margin: 70px 30px;
-    
+    max-width: 1100px;
+    margin: auto;
+    padding: 4rem 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s ease forwards;
 }
 
-.recomend-header{
-    font-family: "Dancing Script", serif;
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.recomend-header {
+    font-family: "Dancing Script", cursive;
     color: #F8E4BE;
-    font-size: 70px;
-    align-self: center;
-    margin: 20px 70px;
-    z-index: 1;
-    text-shadow: #000000 2px 2px 2px;
+    font-size: 4.5rem;
+    text-align: center;
+    margin: 2rem 0;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.recomend-container{
+.recomend-header::after {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #F8E4BE, transparent);
+}
+
+.recomend-container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 100px;
-    
+    gap: 2rem;
+    padding: 2rem 0;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
 }
 
-.recomend-card{
+.recomend-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.recomend-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.recomend-container::-webkit-scrollbar-thumb {
+    background: #F8E4BE;
+    border-radius: 4px;
+}
+
+.recomend-card {
+    scroll-snap-align: center;
+    flex: 0 0 300px;
     cursor: pointer;
-    border: solid 0.1px rgba(255, 255, 255, 0.541);
-    border-radius: 35px;
-    background: radial-gradient(circle, #775142, #221518);
-    
+    border-radius: 25px;
+    background: linear-gradient(145deg, #6d4d41 0%, #2a1c1a 100%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-.recomend-card:hover .upper{
-    background-color: transparent;
-    transition: 0.1s;
+.recomend-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
 
-.recomend-card:hover .recomend-image{
-    scale: 1.2;
-    transition: ease-in-out 0.2s;
-}
-
-.upper{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #54372a;
-    border-top-left-radius: 35px;
-    border-top-right-radius: 35px;
-    
-
-}
-
-.lower{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #6D5349;
-    border-bottom-left-radius: 35px;
-    border-bottom-right-radius: 35px;
-    padding: 20px 40px;
-    
-    
-}
-
-.recomend-image{
+.recomend-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
     width: 100%;
     height: 100%;
-    
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    transition: 0.5s;
 }
 
-.recomend-name1{
-    color: #F8E4BE;
-    font-size: 20px;
-    font-family: 'roboto';
-    font-weight: 400;
-    margin-inline: 10px;
-    text-shadow: 1px 1px 4px #000000;
-    
+.recomend-card:hover::before {
+    left: 100%;
 }
 
-.recomend-name2{
-    color: #3b3a37a9;
-    font-size: 25px;
-    font-family: 'roboto';
-    font-weight: 400;
-    margin-inline: 10px;
+.upper {
+    position: relative;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(84, 55, 42, 0.9) 0%, rgba(34, 21, 24, 0.9) 100%);
+    backdrop-filter: blur(8px);
+    border-radius: 25px 25px 0 0;
+    transition: all 0.3s ease;
 }
 
-.recomend-name3{
-    color: #ffffff;
-    font-size: 20px;
-    font-family: 'roboto';
-    font-weight: 200;
-    margin-inline: 10px;
-    text-shadow: 1px 1px 4px #000000;
+.lower {
+    padding: 1.5rem;
+    background: rgba(54, 38, 34, 0.95);
+    border-radius: 0 0 25px 25px;
 }
 
-.names{
+.recomend-image {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.recomend-card:hover .recomend-image {
+    transform: scale(1.1) rotate(-2deg);
+}
+
+.names {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 0;
 }
 
-.info{
-    height: 30px;
-    width: auto;
-    margin: 20px auto -10px 20px;
-    opacity: 0.6;
+.recomend-name1 {
+    color: #F8E4BE;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
-.cart{
-    height: 30px;
-    width: auto;
-    margin: -10px 30px 10px auto;
+.recomend-name2 {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.recomend-name3 {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 300;
+}
+
+.info, .cart {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.3));
+}
+
+.info {
+    top: 15px;
+    left: 15px;
     opacity: 0.8;
+}
+
+.cart {
+    top: 15px;
+    right: 15px;
+    opacity: 0.8;
+}
+
+.recomend-card:hover .info,
+.recomend-card:hover .cart {
+    transform: scale(1.2);
+    opacity: 1;
 }

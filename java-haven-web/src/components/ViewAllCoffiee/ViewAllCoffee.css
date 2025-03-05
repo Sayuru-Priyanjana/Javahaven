@@ -1,0 +1,383 @@
+/* ViewAllCoffees.css */
+.view-all-coffees {
+    padding: 80px 20px;
+    background-color: transparent; /* Light background for contrast */
+    text-align: center;
+}
+
+.section-title {
+    font-size: 36px;
+    font-family: "Clicker Script", cursive;
+    color: #6d6969; /* Coffee-themed color */
+    margin-bottom: 40px;
+}
+
+.header{
+    font-family: "Dancing Script", serif;
+    color: #F8E4BE;
+    font-size: 60px;
+    align-self: center;
+    margin: 20px 70px;
+    z-index: 1;
+    text-shadow: #000000 2px 2px 2px;
+}
+
+.coffee-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.coffee-card {
+    background-color: transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border:solid 1px #ff990097;
+    max-width: 270px;
+    max-height: 500px;
+
+}
+
+.coffee-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    transition: transform 0.5s ease-in-out, background-color 0.3s ease-in-out;
+    
+}
+
+.coffee-card:hover .coffee-image {
+    transform: rotate(45deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+.coffee-card:hover-out .coffee-image {
+    transform: rotate(-45deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+
+.coffee-image {
+    width: 250px;
+    height: 250px;
+    
+    
+
+
+}
+
+.coffee-details {
+    padding: 20px;
+    text-align: left;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+   
+}
+
+
+
+
+
+@keyframes shine {
+    100% {
+        left: 150%;
+    }
+}
+
+/* Text Hover Effects */
+.coffee-title {
+    font-size: 24px;
+    font-family: "Roboto", sans-serif;
+    color: #533529;
+    margin-bottom: 12px;
+    position: relative;
+    display: inline-block;
+}
+
+.coffee-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #533529;
+    transition: width 0.3s ease;
+}
+
+.coffee-card:hover .coffee-title::after {
+    width: 100%;
+}
+
+/* Enhanced Order Button */
+.order-button {
+    background: linear-gradient(45deg, #533529, #221518);
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.order-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: left 0.6s ease;
+}
+
+.order-button:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.order-button:hover::before {
+    left: 100%;
+}
+
+
+
+
+
+
+
+.coffee-price {
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    color: #ff9900; /* Accent color for price */
+    margin-bottom: 10px;
+}
+
+.coffee-description {
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.order-button {
+    background-color: #533529;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.order-button:hover {
+    background-color: #221518; /* Darker shade on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 28px;
+    }
+
+    .coffee-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 24px;
+    }
+
+    .coffee-card {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-header {
+    background-color: #533529;
+    color: #fff;
+    padding: 5px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 17px;
+    font-family: "Roboto", sans-serif;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover {
+    color: #ff9900;
+}
+
+.modal-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.modal-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.modal-title {
+    font-size: 22px;
+    font-family: "Roboto", sans-serif;
+    color: #533529;
+    margin-bottom: 10px;
+}
+
+.modal-price {
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    color: #ff9900;
+    margin-bottom: 10px;
+}
+
+.modal-description {
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.modal-footer {
+    padding: 15px 50px;
+    background-color: #e0e0e08b;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cancel-button,
+.proceed-button {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.proceed-button {
+    background: linear-gradient(45deg, #533529, #221518);
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.proceed-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: left 0.6s ease;
+}
+
+.proceed-button:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.proceed-button:hover::before {
+    left: 100%;
+}
+
+.cancel-button {
+    background-color: #ccc;
+    color: #333;
+}
+
+.cancel-button:hover {
+    background-color: #999;
+}
+
+.proceed-button {
+    background-color: #533529;
+    color: #fff;
+}
+
+.proceed-button:hover {
+    background-color: #221518;
+}
+
+/* Animation for Modal */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

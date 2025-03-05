@@ -1,120 +1,183 @@
 /* HeroHeader.css */
-.hero-header {
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: left;
-    padding: 100px 0;
-    position: relative;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;500;700&display=swap');
+
+:root {
+  --gold: #FFD700;
+  --copper: #B87333;
+  --espresso: #3A201F;
+  --cream: #FFF5E1;
+  --text-spacing: 8px;
 }
 
-.hero-header::before {
-    content: "";
-    /* background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)); */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)); */
-    z-index: 1;
+.hero-header {
+  background: linear-gradient(135deg, var(--espresso) 0%, #2A1C1A 100%);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+  margin-top: 65px;
 }
 
 .hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 90%; /* Increased max-width for better responsiveness */
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex; /* Enable flexbox for layout */
-    align-items: center; /* Vertically align items */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
 }
 
-.hero-text { /* Container for the text content */
-    flex: 1; /* Allow text to take up available space */
-    margin-right: 20px; /* Add spacing between text and image */
+.hero-text {
+  position: relative;
+  z-index: 2;
 }
-/* @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap'); */
-
-
-    
 
 .hero-content h1 {
-    font-size: 220px;
-    margin-bottom: -10px;
-    margin-top: -40px;
-    font-family: "Clicker Script", serif;
-    font-weight: 400;
-    font-style: normal;
-    
+  font-size: 4rem;
+  margin: 1rem 0;
+  font-family: 'Playfair Display', serif;
+  background: linear-gradient(45deg, var(--gold), var(--copper));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
 }
 
-.top-p{
-
-    font-size: 15px;
-    line-height: 25px;
-    margin-top: -50px; /* Adjust the margin to position top-p closer to h1 */
-    text-align: justify; /* Justify the text */
-    font-family: "Roboto", serif;
-    font-weight: 300;
-    color: rgb(224, 224, 224);
-    max-width: 527px;
-    opacity: 0.9;
-    margin-left: 20px;
+.top-p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  color: var(--gold);
+  margin-bottom: 1rem;
 }
 
-.hero-content p {
-    font-size: 15px;
-    line-height: 25px;
-    margin-bottom: 30px;
-    text-align: justify; /* Justify the text */
-    font-family: "Roboto", serif;
-    font-weight: 300;
-    color: rgb(255, 255, 255);
-    max-width: 527px;
-    opacity: 0.9;
+.description {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: var(--cream);
+  max-width: 400px;
+  margin: 1.5rem 0;
+  line-height: 1.6;
 }
 
 .order-now {
-    background-color: #ff9900;
-    color: rgb(0, 0, 0);
-    padding: 10px 15px;
-    border: none;
-    border-radius: 24px;
-    font-size: 16px;
-    font-style: normal;
-    cursor: pointer;
-    width: 110;
-    height: 30;
-    transition: background-color 0.3s ease;
+  background: rgba(255, 215, 0, 0.1);
+  color: var(--gold);
+  padding: 0.8rem 2rem;
+  border: 2px solid var(--gold);
+  border-radius: 25px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  text-decoration: none;
 }
 
 .order-now:hover {
-    background-color: #d49a0f;
+  background: rgba(255, 215, 0, 0.2);
+  letter-spacing: 0.5px;
 }
 
-.rotatingCoffee {
-    width: 450px; /* Set a fixed width for the image */
-    height: auto; /* Maintain aspect ratio */
-    animation: rotate 30s linear infinite; /* Apply rotation animation */
-    flex-shrink: 0; /* Prevent image from shrinking */
-    margin-right: 35px;
-    transition: transform 0.5s ease; /* Smooth transition for hover effects */
-    margin-top: -30px;
-    
+.coffee-container {
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
 }
 
-.rotatingCoffee:hover {
-    transform: scale(1.1) rotate(360deg); /* Combine zoom and maintain rotation */
+.magic-coffee {
+  width: 130%;
+  height: auto;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-origin: center;
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
 }
 
 
 
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.hover-text {
+  position: absolute;
+  opacity: 0;
+  font-family: 'Poppins', sans-serif;
+  color: var(--cream);
+  font-size: 0.9rem;
+  padding: 6px 12px;
+  background: rgba(58, 32, 31, 0.8);
+  border-radius: 20px;
+  border: 1px solid var(--gold);
+  transition: all 0.4s ease;
+  white-space: nowrap;
+}
+
+/* Text Positions */
+.hover-text.top {
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hover-text.right {
+  top: 50%;
+  right: -20px;
+  transform: translateY(-50%);
+}
+
+.hover-text.bottom {
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hover-text.left {
+  top: 50%;
+  left: -20px;
+  transform: translateY(-50%);
+}
+
+/* Hover Effects */
+
+/* .coffee-container:hover .magic-coffee {
+  transform: rotate(-5deg) scale(1.1);
+  filter: brightness(1.1) drop-shadow(0 0 15px rgba(255, 215, 0, 0.4));
+} */
+
+.coffee-container:hover .hover-text {
+  opacity: 1;
+  transform: translate(var(--text-spacing), var(--text-spacing));
+}
+
+.coffee-container:hover .hover-text.top {
+  transform: translate(-50%, calc(-50% - var(--text-spacing)));
+}
+
+.coffee-container:hover .hover-text.right {
+  transform: translate(calc(50% + var(--text-spacing)), -50%);
+}
+
+.coffee-container:hover .hover-text.bottom {
+  transform: translate(-50%, calc(50% + var(--text-spacing)));
+}
+
+.coffee-container:hover .hover-text.left {
+  transform: translate(calc(-50% - var(--text-spacing)), -50%);
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .coffee-container {
+    width: 250px;
+    margin-top: 2rem;
+  }
+
+  .hover-text {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
 }

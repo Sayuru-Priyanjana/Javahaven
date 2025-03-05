@@ -1,3 +1,9 @@
 body{
     background-color: #221518;
 }
+
+html {
+    scroll-behavior: smooth;
+  }
+
+ 
